@@ -27,6 +27,7 @@ class m_project(models.Model):
     url = models.CharField(max_length=100, help_text="采集地址", default=0)
     title = models.CharField(max_length=80, help_text="素材名称")
     size = models.CharField(max_length=50, help_text="素材尺寸", default=0)
+    scale = models.CharField(max_length=100, help_text="缩略图", default=0)
     color_type = models.CharField(max_length=50, help_text="素材颜色模式", default=0)
     down_png = models.CharField(max_length=600, help_text="png文件路径", default=0)
     down_zip = models.CharField(max_length=600, help_text="压缩文件路径", default=0)

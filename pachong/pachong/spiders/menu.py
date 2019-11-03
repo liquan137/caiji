@@ -1,17 +1,18 @@
 import scrapy
 from scrapy.selector import Selector
-from pachong.items import *
+from ..items import *
 from pypinyin import pinyin, lazy_pinyin
-from pachong.pipelines import *
+from ..pipelines import *
 from admin.models import *
 import time
 import json
+from scrapy_splash import SplashRequest
 
 
 # scrapy crawl menu_1
 class MenuSpider(scrapy.spiders.Spider):
     name = "menu_1"
-    allowed_domains = ["dmoz.org"]
+    allowed_domains = [""]
     start_urls = [
         "http://669pic.com/",
     ]
@@ -218,7 +219,7 @@ class Menu3Spider(scrapy.spiders.Spider):
             item['title'] = each.xpath('./a/text()').extract()[0]
             item['url'] = start_urls + each.xpath('./a/@href').extract()[0]
             try:
-                father = m_c_project(contact_id=17, url=item['url'], title=item['title'],
+                father = m_c_project(contact_id=5, url=item['url'], title=item['title'],
                                      update_time=round(time.time()),
                                      create_time=round(time.time()))
                 father.save()
@@ -233,7 +234,7 @@ class Menu3Spider(scrapy.spiders.Spider):
 class List2Spider(scrapy.spiders.Spider):
     name = "list2"
     allowed_domains = [""]
-    urls = list(m_c_project.objects.filter(contact_id=17).values())
+    urls = list(m_c_project.objects.filter(contact_id=5).values())
     start_urls = []
     for urlItem in range(0, 100):
         start_urls.append("https://www.ivsky.com/bizhi/" + 'index_' + str(urlItem) + '.html')
@@ -241,7 +242,7 @@ class List2Spider(scrapy.spiders.Spider):
     def parse(self, response):
         items = []
         filename = 'menu.html'
-        start_urls = "https://www.ivsky.com/bizhi"
+        start_urls = "https://www.ivsky.com/"
         with open(filename, 'wb') as f:
             f.write(response.body)
         for each in response.selector.xpath('//ul[@class="ali"]/li'):
@@ -256,6 +257,7 @@ class List2Spider(scrapy.spiders.Spider):
             items.append(item)
         return items
 
+
 # 爬取天堂图片网
 # scrapy crawl list3
 class List3Spider(scrapy.spiders.Spider):
@@ -263,14 +265,20 @@ class List3Spider(scrapy.spiders.Spider):
     allowed_domains = [""]
     urls = list(m_contents_url.objects.all().values())
     start_urls = []
-    for urlItem in urls:
-        print('url', urlItem['url'])
-        start_urls.append(urlItem['url'])
+    # for urlItem in urls:
+    #     url = urlItem['url'].split('/bizhi')
+    #     start_urls.append('https://www.ivsky.com/bizhi' + url[2])
+
+    for urlItem in range(1447, 1510):
+        print(urls[urlItem])
+        url = urls[urlItem]['url'].split('/bizhi')
+        print('当前位置：', urlItem)
+        start_urls.append('https://www.ivsky.com/bizhi' + url[2])
 
     def parse(self, response):
         items = []
         filename = 'menu.html'
-        start_urls = "https://www.ivsky.com/bizhi"
+        start_urls = "https://www.ivsky.com"
         with open(filename, 'wb') as f:
             f.write(response.body)
         for each in response.selector.xpath('//ul[@class="pli"]/li'):
@@ -285,16 +293,16 @@ class List3Spider(scrapy.spiders.Spider):
             items.append(item)
         return items
 
+
 # 爬取天堂图片网
-# scrapy crawl img
-class ImgSpider(scrapy.spiders.Spider):
-    name = "img"
+# scrapy crawl imgselect
+class ImgselectSpider(scrapy.spiders.Spider):
+    name = "imgselect"
     allowed_domains = [""]
     urls = list(m_page_url.objects.all().values())
     start_urls = []
-    for urlItem in urls:
-        print('url', urlItem['url'])
-        start_urls.append(urlItem['url'])
+    for index in range(0, 10):
+        start_urls.append(urls[index]['url'])
 
     def parse(self, response):
         items = []
@@ -305,13 +313,14 @@ class ImgSpider(scrapy.spiders.Spider):
         title = response.selector.xpath('//div[@class="pos"]/a[3]/text()').extract()[0]
         id = m_c_project.objects.get(title=title).contact_id
         item = FileItem()
-        download_url = response.selector.xpath('//div[#pic_btn]/a[@class="bt-green"]/@href').extract()[0]
+        download_url = response.selector.xpath('//div[@id="pic_btn"]/a[3]/@href').extract()[0]
         item['down_png'] = [download_url]
-        item['title'] = response.selector.xpath('//div[#al_tit]/h1/text()').extract()[0]
-        item['size'] = response.selector.xpath('//div[#pic_info]/span[1]/text()').extract()[0]
+        item['title'] = response.selector.xpath('//div[@id="al_tit"]/h1/text()').extract()[0]
+        item['size'] = response.selector.xpath('//div[@id="pic_info"]/span[1]/text()').extract()[0]
         item['upload_time'] = round(time.time())
         item['create_time'] = round(time.time())
         item['file_type'] = 'jpg/png'
         item['color_type'] = 'RBG'
+        print(item)
         items.append(item)
         return items
