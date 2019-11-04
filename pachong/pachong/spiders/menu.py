@@ -4,10 +4,15 @@ from ..items import *
 from pypinyin import pinyin, lazy_pinyin
 from ..pipelines import *
 from admin.models import *
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 import json
-from scrapy_splash import SplashRequest
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+import autogui
+from selenium.webdriver.support import expected_conditions as EC
 
 # scrapy crawl menu_1
 class MenuSpider(scrapy.spiders.Spider):
@@ -260,38 +265,38 @@ class List2Spider(scrapy.spiders.Spider):
 
 # 爬取天堂图片网
 # scrapy crawl list3
-class List3Spider(scrapy.spiders.Spider):
-    name = "list3"
-    allowed_domains = [""]
-    urls = list(m_contents_url.objects.all().values())
-    start_urls = []
-    # for urlItem in urls:
-    #     url = urlItem['url'].split('/bizhi')
-    #     start_urls.append('https://www.ivsky.com/bizhi' + url[2])
-
-    for urlItem in range(1447, 1510):
-        print(urls[urlItem])
-        url = urls[urlItem]['url'].split('/bizhi')
-        print('当前位置：', urlItem)
-        start_urls.append('https://www.ivsky.com/bizhi' + url[2])
-
-    def parse(self, response):
-        items = []
-        filename = 'menu.html'
-        start_urls = "https://www.ivsky.com"
-        with open(filename, 'wb') as f:
-            f.write(response.body)
-        for each in response.selector.xpath('//ul[@class="pli"]/li'):
-            item = {}
-            item['title'] = each.xpath('./p/a/text()').extract()[0]
-            item['url'] = start_urls + each.xpath('./p/a/@href').extract()[0]
-            try:
-                father = m_page_url(url=item['url'], create_time=round(time.time()))
-                father.save()
-            except:
-                None
-            items.append(item)
-        return items
+# class List3Spider(scrapy.spiders.Spider):
+#     name = "list3"
+#     allowed_domains = [""]
+#     urls = list(m_contents_url.objects.all().values())
+#     start_urls = []
+#     for urlItem in urls:
+#         url = urlItem['url'].split('/bizhi')
+#         start_urls.append('https://www.ivsky.com/bizhi' + url[2])
+#
+#     for urlItem in range(1447, 1510):
+#         print(urls[urlItem])
+#         url = urls[urlItem]['url'].split('/bizhi')
+#         print('当前位置：', urlItem)
+#         start_urls.append('https://www.ivsky.com/bizhi' + url[2])
+#
+#     def parse(self, response):
+#         items = []
+#         filename = 'menu.html'
+#         start_urls = "https://www.ivsky.com"
+#         with open(filename, 'wb') as f:
+#             f.write(response.body)
+#         for each in response.selector.xpath('//ul[@class="pli"]/li'):
+#             item = {}
+#             item['title'] = each.xpath('./p/a/text()').extract()[0]
+#             item['url'] = start_urls + each.xpath('./p/a/@href').extract()[0]
+#             try:
+#                 father = m_page_url(url=item['url'], create_time=round(time.time()))
+#                 father.save()
+#             except:
+#                 None
+#             items.append(item)
+#         return items
 
 
 # 爬取天堂图片网
@@ -299,10 +304,10 @@ class List3Spider(scrapy.spiders.Spider):
 class ImgselectSpider(scrapy.spiders.Spider):
     name = "imgselect"
     allowed_domains = [""]
-    urls = list(m_page_url.objects.all().values())
+    url = list(m_page_url.objects.all().values())
     start_urls = []
     for index in range(0, 10):
-        start_urls.append(urls[index]['url'])
+        start_urls.append(url[index]['url'])
 
     def parse(self, response):
         items = []
@@ -312,6 +317,39 @@ class ImgselectSpider(scrapy.spiders.Spider):
             f.write(response.body)
         title = response.selector.xpath('//div[@class="pos"]/a[3]/text()').extract()[0]
         id = m_c_project.objects.get(title=title).contact_id
+        chrome_options = Options()
+        chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument('--no-sandbox')
+        prefs = {'profile.default_content_settings.popups': 2,
+                 'download.default_directory': 'H:\website\caiji\pachong\pachong\img'}
+        chrome_options.add_experimental_option('prefs', prefs)
+        # 指定谷歌浏览器路径
+        download_url = response.selector.xpath('//div[@id="pic_btn"]/a[2]/@href').extract()[0]
+        print(download_url)
+        self.driver = webdriver.Chrome(chrome_options=chrome_options,
+                                       executable_path='C:\Program Files (x86)\Google\Chrome\Application\chromedriver')
+        self.driver.get('https://www.ivsky.com'+download_url)
+        time.sleep(1)
+        wait = WebDriverWait(self.driver, 10)
+        # print(self.driver.find_element_by_css_selector('div#pic_btn a:nth-of-type(3)').text)
+        img = wait.until(EC.element_to_be_clickable((By.TAG_NAME, 'img')))
+        # 执行鼠标动作
+        actions = ActionChains(self.driver)
+        # 找到图片后右键单击图片
+        actions.context_click(img)
+        actions.perform()
+        # 发送键盘按键，根据不同的网页，
+        # 右键之后按对应次数向下键，
+        # 找到图片另存为菜单
+        autogui.typewrite(['down', 'down', 'down', 'down', 'down', 'down', 'down', 'enter', 'enter'])
+        # 单击图片另存之后等1s敲回车
+        time.sleep(1)
+        autogui.typewrite(['enter'])
+        # self.driver.find_element_by_css_selector('div#pic_btn a:nth-of-type(3)').click()
+        time.sleep(2)
+        # print(self.driver.page_source)
+        self.driver.quit()
         item = FileItem()
         download_url = response.selector.xpath('//div[@id="pic_btn"]/a[3]/@href').extract()[0]
         item['down_png'] = [download_url]

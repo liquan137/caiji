@@ -27,7 +27,6 @@ class AreaSpiderMiddleware(object):
         time.sleep(1)
         html = self.driver.page_source
         self.driver.quit()
-        print('html',html)
         return scrapy.http.HtmlResponse(url=request.url, body=html.encode('utf-8'), encoding='utf-8',
                                         request=request)
 
