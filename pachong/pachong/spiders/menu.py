@@ -13,6 +13,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import autogui
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+
 
 # scrapy crawl menu_1
 class MenuSpider(scrapy.spiders.Spider):
@@ -311,54 +313,42 @@ class ImgselectSpider(scrapy.spiders.Spider):
 
     def parse(self, response):
         items = []
-        filename = 'menu.html'
+        # filename = 'menu.html'
         start_urls = "https://www.ivsky.com/bizhi"
-        with open(filename, 'wb') as f:
-            f.write(response.body)
+        # with open(filename, 'wb') as f:
+        #     f.write(response.body)
         title = response.selector.xpath('//div[@class="pos"]/a[3]/text()').extract()[0]
         id = m_c_project.objects.get(title=title).contact_id
         chrome_options = Options()
         chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
-        prefs = {'profile.default_content_settings.popups': 2,
+        chrome_options.add_argument('Referer=' + response.url)
+        prefs = {'profile.default_content_settings.popups': 0,
                  'download.default_directory': 'H:\website\caiji\pachong\pachong\img'}
         chrome_options.add_experimental_option('prefs', prefs)
         # 指定谷歌浏览器路径
-        download_url = response.selector.xpath('//div[@id="pic_btn"]/a[2]/@href').extract()[0]
+        download_url = response.selector.xpath('//div[@id="pic_btn"]/a[3]/@href').extract()[0]
         print(download_url)
         self.driver = webdriver.Chrome(chrome_options=chrome_options,
                                        executable_path='C:\Program Files (x86)\Google\Chrome\Application\chromedriver')
-        self.driver.get('https://www.ivsky.com'+download_url)
+        print('url:' + response.url)
+        self.driver.get(response.url)
         time.sleep(1)
-        wait = WebDriverWait(self.driver, 10)
-        # print(self.driver.find_element_by_css_selector('div#pic_btn a:nth-of-type(3)').text)
-        img = wait.until(EC.element_to_be_clickable((By.TAG_NAME, 'img')))
-        # 执行鼠标动作
-        actions = ActionChains(self.driver)
-        # 找到图片后右键单击图片
-        actions.context_click(img)
-        actions.perform()
-        # 发送键盘按键，根据不同的网页，
-        # 右键之后按对应次数向下键，
-        # 找到图片另存为菜单
-        autogui.typewrite(['down', 'down', 'down', 'down', 'down', 'down', 'down', 'enter', 'enter'])
-        # 单击图片另存之后等1s敲回车
-        time.sleep(1)
-        autogui.typewrite(['enter'])
-        # self.driver.find_element_by_css_selector('div#pic_btn a:nth-of-type(3)').click()
-        time.sleep(2)
-        # print(self.driver.page_source)
+        self.driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').click()
         self.driver.quit()
         item = FileItem()
         download_url = response.selector.xpath('//div[@id="pic_btn"]/a[3]/@href').extract()[0]
-        item['down_png'] = [download_url]
+        item['down_png'] = ['https:' + download_url]
         item['title'] = response.selector.xpath('//div[@id="al_tit"]/h1/text()').extract()[0]
         item['size'] = response.selector.xpath('//div[@id="pic_info"]/span[1]/text()').extract()[0]
         item['upload_time'] = round(time.time())
         item['create_time'] = round(time.time())
         item['file_type'] = 'jpg/png'
         item['color_type'] = 'RBG'
+        item['image_urls'] = ['https:' + download_url]
+        img = download_url.split('/')[len(download_url.split('/')) - 1].split('?')
+        item['images'] = [img[0]]
         print(item)
         items.append(item)
         return items

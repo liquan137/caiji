@@ -20,6 +20,7 @@ class AreaSpiderMiddleware(object):
         chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('Referer=' + request.url)
         # 指定谷歌浏览器路径
         self.driver = webdriver.Chrome(chrome_options=chrome_options,
                                        executable_path='C:\Program Files (x86)\Google\Chrome\Application\chromedriver')
@@ -43,6 +44,7 @@ class RandomUserAgentMiddleware(object):
         rand_use = random.choice(self.agent)
         if rand_use:
             request.headers.setdefault('User-Agent', rand_use)
+            request.headers.setdefault('Referer', request.url)
 
 
 class ProxyMiddleware(object):

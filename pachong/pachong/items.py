@@ -26,6 +26,8 @@ class ListItem(scrapy.Item):
 class FileItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
     title = scrapy.Field()
     size = scrapy.Field()
     upload_time = scrapy.Field()
