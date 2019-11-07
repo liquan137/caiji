@@ -52,4 +52,5 @@ class m_contents_url(models.Model):
 
 class m_page_url(models.Model):
     url = models.CharField(max_length=100, help_text="地址", unique=True)
+    use = models.IntegerField(help_text="爬取状态", default=0)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)

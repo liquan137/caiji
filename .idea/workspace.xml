@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3cbdc1f9-b943-40f1-ad55-b90529d90640" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pachong/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pachong/pachong/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pachong/pachong/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pachong/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/geckodriver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pachong/pachong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pachong/pachong/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" afterDir="false" />
     </list>
@@ -35,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pachong/pachong/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="347">
               <caret line="28" column="14" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="14" />
               <folding>
                 <element signature="e#154#167#0" expanded="true" />
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="320" column="2" selection-start-line="320" selection-start-column="2" selection-end-line="320" selection-end-column="2" />
+            <state relative-caret-position="468">
+              <caret line="380" column="26" lean-forward="true" selection-start-line="380" selection-start-column="26" selection-end-line="380" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -57,36 +57,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pachong/pachong/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-              <folding>
-                <element signature="e#170#196#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4465">
-              <caret line="237" column="22" selection-start-line="237" selection-start-column="22" selection-end-line="237" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pachong/pachong/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="404">
+              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -113,14 +87,17 @@
       <list>
         <option value="$PROJECT_DIR$/pachong/pachong/middlewares.py" />
         <option value="$PROJECT_DIR$/pachong/pachong/items.py" />
-        <option value="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" />
+        <option value="$PROJECT_DIR$/pachong/pachong/pipelines.py" />
+        <option value="$PROJECT_DIR$/pachong/pachong/myfox.py" />
         <option value="$PROJECT_DIR$/pachong/pachong/settings.py" />
+        <option value="$PROJECT_DIR$/admin/models.py" />
+        <option value="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="84" />
-    <option name="y" value="45" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="292" />
+    <option name="y" value="88" />
     <option name="width" value="1642" />
     <option name="height" value="961" />
   </component>
@@ -154,6 +131,11 @@
               <item name="caiji" type="462c0819:PsiDirectoryNode" />
               <item name="pachong" type="462c0819:PsiDirectoryNode" />
               <item name="pachong" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caiji" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -196,7 +178,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="caiji.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="SDK_HOME" value="D:\ProgramData\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -229,31 +211,43 @@
       <workItem from="1572746928825" duration="20139000" />
       <workItem from="1572912500839" duration="9795000" />
       <workItem from="1572943637561" duration="576000" />
+      <workItem from="1573000500464" duration="595000" />
+      <workItem from="1573092559912" duration="6181000" />
+      <workItem from="1573111355956" duration="7471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15500000" />
+    <option name="totallyTimeSpent" value="29747000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="292" y="88" width="1642" height="961" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26172706" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2711757" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33480176" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33454105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3296582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.3030303" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.32286024" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.15096618" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -308,6 +302,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/django/core/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="764" selection-start-line="764" selection-end-line="764" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/scrapy/pipelines/images.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="2686" selection-start-line="2686" selection-end-line="2686" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -318,9 +357,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="e#170#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/myfox.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1821">
+          <caret line="223" column="20" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pachong/pachong/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="347">
           <caret line="28" column="14" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="14" />
           <folding>
             <element signature="e#154#167#0" expanded="true" />
@@ -328,37 +394,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pachong/pachong/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding>
-            <element signature="e#170#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4465">
-          <caret line="237" column="22" selection-start-line="237" selection-start-column="22" selection-end-line="237" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pachong/pachong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="12" />
+        <state relative-caret-position="404">
+          <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="320" column="2" selection-start-line="320" selection-start-column="2" selection-end-line="320" selection-end-column="2" />
+        <state relative-caret-position="468">
+          <caret line="380" column="26" lean-forward="true" selection-start-line="380" selection-start-column="26" selection-end-line="380" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

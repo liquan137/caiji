@@ -208,10 +208,10 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    # 'pachong.pipelines.PachongPipeline': 300,
-    'scrapy.pipelines.images.ImagesPipeline': 1
-}
+# ITEM_PIPELINES = {
+#     # 'pachong.pipelines.PachongPipeline': 300,
+#     'scrapy.pipelines.images.ImagesPipeline': 1
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -235,4 +235,5 @@ ITEM_PIPELINES = {
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 FILES_STORE = './img'
-IMAGES_STORE = 'h:/img'
+# IMAGES_STORE = 'h:/img'
+# IMAGES_URL_FIELD = 'image_urls'

@@ -14,10 +14,12 @@ from selenium.webdriver.common.by import By
 import autogui
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-
+from pyvirtualdisplay import Display
+import os
 
 # scrapy crawl menu_1
 class MenuSpider(scrapy.spiders.Spider):
+
     name = "menu_1"
     allowed_domains = [""]
     start_urls = [
@@ -306,37 +308,47 @@ class List2Spider(scrapy.spiders.Spider):
 class ImgselectSpider(scrapy.spiders.Spider):
     name = "imgselect"
     allowed_domains = [""]
-    url = list(m_page_url.objects.all().values())
+
+    # 获取数据库中需要采集的网址内容页
+    url = list(m_page_url.objects.filter(use=0).values())
     start_urls = []
-    for index in range(0, 10):
-        start_urls.append(url[index]['url'])
+    # 遍历列表并生成url数组
+    for index in url:
+        start_urls.append(index['url'])
+
 
     def parse(self, response):
         items = []
-        # filename = 'menu.html'
-        start_urls = "https://www.ivsky.com/bizhi"
-        # with open(filename, 'wb') as f:
-        #     f.write(response.body)
-        title = response.selector.xpath('//div[@class="pos"]/a[3]/text()').extract()[0]
-        id = m_c_project.objects.get(title=title).contact_id
-        chrome_options = Options()
-        chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('Referer=' + response.url)
-        prefs = {'profile.default_content_settings.popups': 0,
-                 'download.default_directory': 'H:\website\caiji\pachong\pachong\img'}
-        chrome_options.add_experimental_option('prefs', prefs)
-        # 指定谷歌浏览器路径
-        download_url = response.selector.xpath('//div[@id="pic_btn"]/a[3]/@href').extract()[0]
-        print(download_url)
-        self.driver = webdriver.Chrome(chrome_options=chrome_options,
-                                       executable_path='C:\Program Files (x86)\Google\Chrome\Application\chromedriver')
-        print('url:' + response.url)
-        self.driver.get(response.url)
-        time.sleep(1)
-        self.driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').click()
-        self.driver.quit()
+        # 开启火狐浏览器驱动
+        fp = webdriver.FirefoxProfile()
+        # 自定义路径下载
+        fp.set_preference("browser.download.folderList", 2)
+
+        options = webdriver.FirefoxOptions()
+        # 设置静默模式
+        options.add_argument('-headless')
+        # 取当前时间戳
+        pathtime = str(round(time.time()))
+        # 定义图片存放路径
+        path = os.getcwd() + '\\img\\' + pathtime
+        # 判断路径目录文件夹是否存在
+        isExists = os.path.exists(path)
+        if not isExists:
+            # 不存在则创建文件夹
+            os.makedirs(path)
+        # 自定义路径位置
+        fp.set_preference("browser.download.dir", path)
+        # 下载的格式
+        fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "image/jpeg")
+        driver = webdriver.Firefox(firefox_profile=fp, options=options)
+        driver.get(response.url)
+        # 模拟点击，进行下载
+        driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').click()
+        # 延时 2秒等待下载完毕
+        time.sleep(2)
+        # 关闭
+        driver.quit()
+        # 定义item，这里其实没必要了，我已经直接存数据库了
         item = FileItem()
         download_url = response.selector.xpath('//div[@id="pic_btn"]/a[3]/@href').extract()[0]
         item['down_png'] = ['https:' + download_url]
@@ -349,6 +361,22 @@ class ImgselectSpider(scrapy.spiders.Spider):
         item['image_urls'] = ['https:' + download_url]
         img = download_url.split('/')[len(download_url.split('/')) - 1].split('?')
         item['images'] = [img[0]]
-        print(item)
+        # 合成下载文件的路径
+        filePath = 'img/' + pathtime + '/' + img[0]
+        # 查询当前图片所属的类别 并返回ID
+        id_title = response.selector.xpath('//div[@class="pos"]/a[3]/text()').extract()[0]
+        id = m_c_project.objects.get(title=id_title).id
+        try:
+            # 存入数据库
+            child = m_project(contact_id=id, url=response.url, title=item['title'], down_png=filePath,
+                              size=item['size'], color_type=item['color_type'], file_type=item['file_type'],
+                              update_time=round(time.time()), create_time=round(time.time()))
+            child.save()
+            # 已经采集完图片的，就修改数据库中的采集状态
+            commit = m_page_url.objects.get(url=response.url)
+            commit.use = 1
+            commit.save()
+        except:
+            None
         items.append(item)
         return items
