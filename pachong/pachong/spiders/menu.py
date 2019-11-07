@@ -11,12 +11,17 @@ import time
 import json
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-import autogui
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
-from pyvirtualdisplay import Display
 import os
+from django.db import close_old_connections
 
+def close_old_connections_wrapper(func):
+    def wrapper(*args, **kwargs):
+        close_old_connections()
+        return func(*args, **kwargs)
+
+    return wrapper
 # scrapy crawl menu_1
 class MenuSpider(scrapy.spiders.Spider):
 
@@ -316,7 +321,7 @@ class ImgselectSpider(scrapy.spiders.Spider):
     for index in url:
         start_urls.append(index['url'])
 
-
+    @close_old_connections_wrapper
     def parse(self, response):
         items = []
         # 开启火狐浏览器驱动
@@ -345,7 +350,7 @@ class ImgselectSpider(scrapy.spiders.Spider):
         # 模拟点击，进行下载
         driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').click()
         # 延时 2秒等待下载完毕
-        time.sleep(2)
+        time.sleep(3)
         # 关闭
         driver.quit()
         # 定义item，这里其实没必要了，我已经直接存数据库了

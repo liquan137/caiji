@@ -80,6 +80,7 @@ DATABASES = {
         'PASSWORD': 'quanli137',
         'HOST': 'localhost',
         'PORT': '3306',
+        'CONN_MAX_AGE': 600,
     }
 }
 
