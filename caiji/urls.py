@@ -15,7 +15,11 @@ Including another URLconf
 """
 from admin import views as admin_views
 from django.urls import path
+from client import views
 
 urlpatterns = [
     path('', admin_views.test),
+    path('cookie/', admin_views.setCookie),
+    path('login/', admin_views.login),
+    path('main/', admin_views.main)
 ]

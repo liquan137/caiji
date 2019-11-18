@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+# import dwebsocket
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -35,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'admin',
-    'current'
+    'current',
+    'client',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +50,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+import dwebsocket
+
+# 为所有的URL提供websocket，如果只是单独的视图需要可以不选
+MIDDLEWARE_CLASSES = ['dwebsocket.middleware.WebSocketMiddleware']
+
+WEBSOCKET_ACCEPT_ALL = True  # 可以允许每一个单独的视图实用websockets
 
 ROOT_URLCONF = 'caiji.urls'
 

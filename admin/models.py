@@ -15,12 +15,14 @@ class m_f_project(models.Model):
     update_time = models.IntegerField(help_text="更新时间", default=1571453334)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
 
+
 class m_c_project(models.Model):
     title = models.CharField(max_length=80, help_text="小类别名称", unique=True)
     contact = models.ForeignKey('m_f_project', on_delete=models.CASCADE)
     url = models.CharField(max_length=100, help_text="采集地址", default=0)
     update_time = models.IntegerField(help_text="更新时间", default=1571453334)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
+
 
 class m_project(models.Model):
     contact = models.ForeignKey('m_c_project', on_delete=models.CASCADE)
@@ -42,15 +44,19 @@ class m_project_keyword(models.Model):
     keyword = models.CharField(max_length=50, help_text="关键词", unique=True)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
 
+
 class m_content_url(models.Model):
     url = models.CharField(max_length=100, help_text="地址", unique=True)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
 
-class m_contents_url(models.Model):
-    url = models.CharField(max_length=100, help_text="地址", unique=True)
-    create_time = models.IntegerField(help_text="创建时间", default=1571453334)
+
 
 class m_page_url(models.Model):
     url = models.CharField(max_length=100, help_text="地址", unique=True)
     use = models.IntegerField(help_text="爬取状态", default=0)
+    create_time = models.IntegerField(help_text="创建时间", default=1571453334)
+
+
+class m_cookie(models.Model):
+    cookie = models.TextField(help_text="cookie", default=0)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)

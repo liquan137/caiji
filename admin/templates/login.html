@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<button onclick="WebSocketTest()">test</button>
+</body>
+
+
+<script>
+    $(function () {
+        window.ws = ''
+        if ("WebSocket" in window) {
+            // 打开一个 web socket
+            ws = new WebSocket("ws://127.0.0.1:8000/login/");
+
+            ws.onopen = function () {
+                console.log("已链接");
+            };
+            ws.onmessage = function (evt) {
+                var received_msg = evt.data;
+                console.log("数据已接收...");
+                console.log("数据:" + received_msg)
+            };
+
+            ws.onclose = function () {
+                console.log("连接已关闭...");
+            };
+        } else {
+            console.log("您的浏览器不支持 WebSocket!");
+        }
+
+
+    })
+
+    function WebSocketTest() {
+        ws.send(JSON.stringify({type: 'cookie',data:{user:'admin',psd:'admin'}}));
+    }
+
+</script>
+
+</html>
