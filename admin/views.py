@@ -128,7 +128,7 @@ def main(request):
             message = json.loads(message.decode('utf8'))
             if message['type'] == 'cookie':
                 status = setCookie()
-                if status:
+                if status == True:
                     # 将信息发至自己的聊天框
                     request.websocket.send(json.dumps(
                         {'code': 0, 'message': message,
