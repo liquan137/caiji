@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/at-ui-style/css/at.min.css">
+    <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/at-ui/dist/at.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <at-button @click="showMessage">开始采集</at-button>
+</div>
+</body>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                user: '',
+                pwd: ''
+            }
+        },
+        methods: {
+            showMessage: function () {
+                ws.send(JSON.stringify({type: 'null', data: {user: 'admin', psd: 'admin'}}));
+                this.$Message('send success')
+            }
+        },
+        mounted() {
+            let that = this
+            $(function () {
+                window.ws = ''
+                if ("WebSocket" in window) {
+                    // 打开一个 web socket
+                    ws = new WebSocket("ws://127.0.0.1:8000");
+
+                    ws.onopen = function () {
+                        console.log("已链接");
+                    };
+                    ws.onmessage = function (evt) {
+                        var received_msg = evt.data;
+                        console.log("数据已接收...");
+
+                        let data = JSON.parse(evt.data)
+                        console.log("数据:" + data.message)
+                        that.$Notify({
+                            title: '温馨提示',
+                            message: data.message,
+                            type: data.type
+                        })
+                    };
+
+                    ws.onclose = function () {
+                        console.log("连接已关闭...");
+                    };
+                } else {
+                    console.log("您的浏览器不支持 WebSocket!");
+                }
+            })
+        }
+    })
+
+</script>
+
+</html>

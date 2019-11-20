@@ -4,43 +4,112 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/at-ui-style/css/at.min.css">
+    <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/at-ui/dist/at.min.js"></script>
 </head>
 <body>
+<style>
+    #app {
+        display: block;
+        height: 100%;
+    }
 
+    .login-box {
+        margin-top: 20%;
+    }
 
-<button onclick="WebSocketTest()">test</button>
+    .form-item {
+        margin: 10px 0;
+    }
+</style>
+<div id="app">
+    <div class="container">
+        <div class="row at-row no-gutter">
+            <div class="col-md-8 col-md-offset-8">
+                <form class="login-box">
+                    <h1>账号登陆</h1>
+                    <div class="form-item">
+                        <at-input v-model="login.user" placeholder="账号" readonly="readonly" name="user"></at-input>
+                    </div>
+                    <div class="form-item">
+                        <at-input v-model="login.pwd" placeholder="密码" type="password" readonly="readonly"
+                                  name="pwd"></at-input>
+                    </div>
+                    <div class="form-item">
+                        <at-button @click="handleLogin" type="primary">Login</at-button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
 </body>
 
 
 <script>
-    $(function () {
-        window.ws = ''
-        if ("WebSocket" in window) {
-            // 打开一个 web socket
-            ws = new WebSocket("ws://127.0.0.1:8000/main/");
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                login: {
+                    user: '',
+                    pwd: ''
+                }
+            }
+        },
+        methods: {
+            handleLogin() {
+                if (this.login.user == '' || this.login.pwd == '') {
+                    return this.$Notify({
+                        title: '错误提示',
+                        message: '表单有选项未填写',
+                        type: 'error'
+                    })
+                }
+                ws.send(JSON.stringify({type: 'login', data: this.login}));
+                this.$Message('send success')
+            }
+        },
+        mounted() {
+            let that = this
+            $(function () {
+                window.ws = ''
+                if ("WebSocket" in window) {
+                    // 打开一个 web socket
+                    ws = new WebSocket("ws://127.0.0.1:8000/login/");
 
-            ws.onopen = function () {
-                console.log("已链接");
-            };
-            ws.onmessage = function (evt) {
-                var received_msg = evt.data;
-                console.log("数据已接收...");
-                console.log("数据:" + received_msg)
-            };
+                    ws.onopen = function () {
+                        console.log("已链接");
+                    };
+                    ws.onmessage = function (evt) {
+                        var received_msg = evt.data;
+                        console.log("数据已接收...");
+                        let data = JSON.parse(evt.data)
+                        that.$Notify({
+                            title: '错误提示',
+                            message: data.message,
+                            type: data.type
+                        })
+                        console.log("数据:" + received_msg)
+                    };
 
-            ws.onclose = function () {
-                console.log("连接已关闭...");
-            };
-        } else {
-            console.log("您的浏览器不支持 WebSocket!");
+                    ws.onclose = function () {
+                        console.log("连接已关闭...");
+                    };
+                } else {
+                    console.log("您的浏览器不支持 WebSocket!");
+                }
+            })
+            setTimeout(() => {
+                var username = $('input[name="user"]')
+                var password = $('input[name="pwd"]')
+                username.removeAttr("readonly");
+                password.removeAttr("readonly");
+            }, 1000)
         }
-
-
     })
-
-    function WebSocketTest() {
-        ws.send(JSON.stringify({type: 'cookie',data:{user:'admin',psd:'admin'}}));
-    }
 
 </script>
 
