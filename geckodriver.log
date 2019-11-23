@@ -609,3 +609,81 @@ JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTr
 JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 JavaScript error: , line 0: NS_ERROR_FAILURE
+1574488331552	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofileK9nEEO"
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+*** You are running in headless mode.
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574488335560	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1574488335560	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1574488335560	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1574488335560	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574488348240	Marionette	INFO	Listening on port 62769
+1574488348792	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_FAILURE
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+/
+*** You are running in headless mode.
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574488365529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1574488365529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1574488365529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1574488365529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574488368583	Marionette	INFO	Listening on port 62894
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574488368921	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: , line 0: NS_ERROR_FAILURE
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+ -- see http://www.mozilla.com/en-US/blocklist/
+*** You are running in headless mode.
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574489917726	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1574489917726	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1574489917726	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1574489917726	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+1574489920156	Marionette	INFO	Listening on port 65157
+1574489920462	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: getContext: Disallowing antialiased backbuffers due to blacklisting.
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://ty.captcha.qq.com/code?siteKey=9WY11WYltbEgYnEIaMhTrkSZqlAPCJzjEbBTyP1cLVkMJWWSB7rQrimq%2F0arQ5A0&Action=GetWebJs, line 1: Error: WebGL warning: <SetDimensions>: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript error: , line 0: NS_ERROR_FAILURE
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
+LdrLoadDll: Blocking load of 'safemon64.dll' -- see http://www.mozilla.com/en-US/blocklist/
