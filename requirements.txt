@@ -246,7 +246,7 @@ traitlets==4.3.2
 Twisted==19.7.0
 typed-ast==1.4.0
 unicodecsv==0.14.1
-urllib3==1.24.1
+urllib3==1.24.2
 view==0.1
 views==0.3
 w3lib==1.21.0
