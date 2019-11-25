@@ -497,7 +497,7 @@ class ImgselectSpider(scrapy.spiders.Spider):
             os.makedirs(path)
         # 自定义路径位置
         fp.set_preference("browser.download.dir", path)
-        # 下载的格式
+        # 下载的格
         fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "image/jpeg")
         driver = webdriver.Firefox(firefox_profile=fp, options=options)
         driver.get(response.url)
