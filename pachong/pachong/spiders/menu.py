@@ -478,14 +478,6 @@ class ImgselectSpider(scrapy.spiders.Spider):
     @close_old_connections_wrapper
     def parse(self, response):
         items = []
-        # 开启火狐浏览器驱动
-        fp = webdriver.FirefoxProfile()
-        # 自定义路径下载
-        fp.set_preference("browser.download.folderList", 2)
-
-        options = webdriver.FirefoxOptions()
-        # 设置静默模式
-        options.add_argument('-headless')
         # 取当前时间戳
         pathtime = str(round(time.time()))
         # 定义图片存放路径
@@ -495,6 +487,14 @@ class ImgselectSpider(scrapy.spiders.Spider):
         if not isExists:
             # 不存在则创建文件夹
             os.makedirs(path)
+        # 开启火狐浏览器驱动
+        fp = webdriver.FirefoxProfile()
+        # 自定义路径下载
+        fp.set_preference("browser.download.folderList", 2)
+
+        options = webdriver.FirefoxOptions()
+        # 设置静默模式
+        options.add_argument('-headless')
         # 自定义路径位置
         fp.set_preference("browser.download.dir", path)
         # 下载的格

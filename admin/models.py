@@ -34,6 +34,7 @@ class m_project(models.Model):
     down_png = models.CharField(max_length=600, help_text="png文件路径", default=0)
     down_zip = models.CharField(max_length=600, help_text="压缩文件路径", default=0)
     file_type = models.CharField(max_length=50, help_text="素材文件格式", default=0)
+    img_view = models.CharField(max_length=50, help_text="图片预览", default=0)
     share = models.CharField(max_length=50, help_text="分享者", default=0)
     update_time = models.IntegerField(help_text="更新时间", default=1571453334)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
