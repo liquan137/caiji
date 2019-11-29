@@ -22,7 +22,7 @@ DJANGO_SETTINGS_MODULE = 'caiji.settings'
 sys.path.insert(0, DJANGO_PROJECT_PATH)
 os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
 application = get_wsgi_application()
-from admin.models import *
+
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
@@ -54,7 +54,9 @@ class rsaKey:
 
 def login():
     start_urls = []
-    urls = list(m_project.objects.filter(size=0).values())
+    post = requests.post('http://49.233.200.55/api/list', {})
+    print(post.text)
+    urls = json.loads(post.text)
     index = 0
     for item in urls:
         print(item)
@@ -124,7 +126,7 @@ def checkCookie():
         timeDate = json.load(timeLog)
         print(timeDate, '上次保存时间')
         timeLog.close()
-        if int(timeDate['time']) + 180 > round(time.time()):
+        if int(timeDate['time']) + 600 > round(time.time()):
             return True
         else:
             return False
@@ -154,15 +156,14 @@ def loadCookie():
 def returnUrl():
     start_urls = []
     index = 0
-    urls = list(m_project.objects.filter(size=0).values())
+    post = requests.post('http://49.233.200.55/api/list', {})
+    print(post.text)
+    urls = json.loads(post.text)
     for item in urls:
         start_urls.append({
             'url': item['url'],
             'id': item['id']
         })
-        index += 1
-        if index == 10:
-            break
     return start_urls
 
 
@@ -237,14 +238,6 @@ def scaleCutImg(path, filename, id):
         os.remove(path + '\\' + filename)
         os.remove(path + '\\' + '%sscale.%s' % (path_arr[0], path_arr[1]))
         print(response['ETag'])
-    imgModel = m_project.objects.get(id=id)
-    print(imgModel)
-    imgModel.size = imgSize
-    imgModel.down_png = downName
-    imgModel.file_type = type.mime
-    imgModel.color_type = mode
-    imgModel.scale = scaleName
-    imgModel.save()
     states = create({
         'id': id,
         'size': imgSize,
@@ -268,7 +261,7 @@ def create(data):
     cipher_text = cipher_text.decode('utf-8')
     print(cipher_text)
     data['key'] = cipher_text
-    post = requests.post('http://49.233.200.55/create', data)
+    post = requests.post('http://49.233.200.55/api/create', data)
     print(post.text)
     res = json.loads(post.text)
     if int(res['code']) == 200:
