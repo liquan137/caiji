@@ -15,14 +15,13 @@ from Crypto.Cipher import PKCS1_v1_5 as Cipher_pkcs1_v1_5
 from Crypto.PublicKey import RSA
 import base64
 import requests
-
+import urllib
 DJANGO_PROJECT_PATH = '../../caiji'
 DJANGO_SETTINGS_MODULE = 'caiji.settings'
 
 sys.path.insert(0, DJANGO_PROJECT_PATH)
 os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
 application = get_wsgi_application()
-
 
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
@@ -34,7 +33,6 @@ scheme = 'http'  # 指定使用 http/https 协议来访问 COS，默认为 https
 config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)
 # 2. 获取客户端对象
 client = CosS3Client(config)
-
 
 # display = Display(visible=0, size=(1440, 1080))
 # display.start()
@@ -202,7 +200,9 @@ def scaleCutImg(path, filename, id):
     elif img.size[0] > 1000 and img.size[0] < 2000:
         scale = 0.6
     else:
-        with open(path + '\\' + filename, 'rb') as fp:
+        img.thumbnail((int(img.size[0] * 0.8), int(img.size[1] * scale)))
+        img.save(path + '/%sscale.%s' % (path_arr[0], path_arr[1]))
+        with open(path + '\\%sscale.%s' % (path_arr[0], path_arr[1]), 'rb') as fp:
             response = client.put_object(
                 Bucket=tong,
                 Body=fp,
@@ -282,7 +282,7 @@ def caiji():
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument(
         'user-agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36"')
-    chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 不加载图片, 提升速度
+    # chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 不加载图片, 提升速度
     chrome_options.add_argument('--no-sandbox')
     # chrome_options.add_argument('Referer=' + url)
     # 指定谷歌浏览器路径
@@ -306,17 +306,86 @@ def caiji():
                     f.write(driver.page_source.encode('utf-8'))
                     print('保存采集HTML', 'success')
                 # 模拟点击，进行下载
-                driver.save_screenshot('full_snap3.png')
+                driver.save_screenshot('codefull.png')
                 time.sleep(1)
                 print('开始下载', 'success')
                 driver.find_element_by_xpath(
                     '//div[@class="right_content fl"]/div[@class="like_down_box right_sub_box"]/a[1]').click()
-                driver.save_screenshot('full_snap4.png')
-                time.sleep(3)
-                driver.save_screenshot('full_snap5.png')
-                filename = driver.find_element_by_xpath('//form[@id="downloadForm"]/input[2]').get_attribute('value')
-                isExists = path + '/' + filename
-                runtime = 0
+                time.sleep(2)
+                driver.save_screenshot('codefull.png')
+                try:
+                    filename = driver.find_element_by_xpath('//form[@id="downloadForm"]/input[2]').get_attribute(
+                        'value')
+                    isExists = path + '/' + filename
+                    runtime = 0
+                except:
+                    # print("检测到验证码！请输入验证码！")
+                    # # js = """$("#captcha-img").click()"""
+                    # # driver.execute_script(js)
+                    # time.sleep(1)
+                    # imgUrl = driver.find_element_by_xpath('//img[@id="captcha-img"]').get_attribute('src')
+                    # img = driver.find_element_by_xpath('//img[@id="captcha-img"]')
+                    # left = img.location['x']
+                    # top = img.location['y']
+                    # right = img.location['x'] + img.size['width']
+                    # bottom = img.location['y'] + img.size['height']
+                    # photo = Image.open('codefull.png')
+                    # photo = photo.crop((left, top, right, bottom))
+                    # photo.save('code.png')
+                    # print('请输入你看见的验证码')
+                    # code = input()
+                    # post = """$.post("/?c=Public&a=check_verify", {
+                    #             code : """+code+"""
+                    #         }, function(data) {
+                    #             if (data == true) {
+                    #                 location.reload();
+                    #             } else {
+                    #                 $('#check_verify_txt').show();
+                    #             }
+                    #         });"""
+                    # driver.execute_script(post)
+                    while True:
+                        try:
+                            driver.find_element_by_xpath(
+                                '//div[@class="right_content fl"]/div[@class="like_down_box right_sub_box"]/a[1]').click()
+                            time.sleep(2)
+                            filename = driver.find_element_by_xpath('//form[@id="downloadForm"]/input[2]').get_attribute(
+                                'value')
+                            isExists = path + '/' + filename
+                            runtime = 0
+                            break
+                        except:
+                            print("检测到验证码！请输入验证码！")
+                            js = """$("#captcha-img").click()"""
+                            driver.execute_script(js)
+                            time.sleep(1)
+                            driver.save_screenshot('codefull.png')
+                            img = driver.find_element_by_xpath('//img[@id="captcha-img"]')
+                            left = img.location['x']
+                            top = img.location['y']
+                            right = img.location['x'] + img.size['width']
+                            bottom = img.location['y'] + img.size['height']
+                            photo = Image.open('codefull.png')
+                            photo = photo.crop((left, top, right, bottom))
+                            photo.save('code.png')
+                            print('请输入你看见的验证码')
+                            code = input()
+                            post = """$.post("/?c=Public&a=check_verify", {
+                                                            code : """ + code + """
+                                                        }, function(data) {
+                                                            if (data == true) {
+                                                                location.reload();
+                                                            } else {
+                                                                $('#check_verify_txt').show();
+                                                            }
+                                                        });"""
+                            driver.execute_script(post)
+                    # down = """$(".like_down_box a").eq(0).click()"""
+                    # driver.execute_script(down)
+                    # filename = driver.find_element_by_xpath('//form[@id="downloadForm"]/input[2]').get_attribute(
+                    #     'value')
+                    # isExists = path + '/' + filename
+                    # runtime = 0
                 while True:
                     print('没有文件')
                     if not os.path.exists(isExists):
@@ -390,6 +459,11 @@ def main():
         index += 1
 
     #
+
+
+def get_file_content(filePath):
+    with open(filePath, 'rb') as fp:
+        return fp.read()
 
 
 if __name__ == '__main__':

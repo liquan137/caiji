@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbdc1f9-b943-40f1-ad55-b90529d90640" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/begin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/begin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/shell/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/cookie.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shell/cookie.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/full_snap.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/full_snap2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/full_snap3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/full_snap4.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/full_snap5.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/other.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/other.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shell/begin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="155">
+              <caret line="350" column="40" selection-start-line="350" selection-start-column="40" selection-end-line="350" selection-end-column="40" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -53,10 +55,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/code.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/other.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
+            <state relative-caret-position="988">
               <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10317">
+              <caret line="559" column="311" selection-start-line="559" selection-start-column="311" selection-end-line="559" selection-end-column="311" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pachong/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="538" column="106" selection-start-line="538" selection-start-column="106" selection-end-line="538" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -78,6 +115,8 @@
       <find>url</find>
       <find>SECRET_KEY</find>
       <find>executable_path</find>
+      <find>rid grid--equal-height</find>
+      <find>grid__item grid__item--tablet-up-half grid__item--desktop-up-third gutter-bottom</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,20 +133,21 @@
         <option value="$PROJECT_DIR$/admin/views.py" />
         <option value="$PROJECT_DIR$/caiji/settings.py" />
         <option value="$PROJECT_DIR$/admin/templates/main.html" />
-        <option value="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" />
         <option value="$PROJECT_DIR$/shell/file.py" />
         <option value="$PROJECT_DIR$/shell/main.py" />
         <option value="$PROJECT_DIR$/admin/models.py" />
         <option value="$PROJECT_DIR$/shell/other.py" />
+        <option value="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" />
+        <option value="D:/ProgramData/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py" />
         <option value="$PROJECT_DIR$/shell/begin.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="649" />
+    <option name="y" value="119" />
+    <option name="width" value="1043" />
+    <option name="height" value="951" />
   </component>
   <component name="ProjectId" id="1T3Wh6l5Fe9p4TCcSvBdSNurWg8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -127,6 +167,24 @@
               <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
               <item name="caiji" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caiji" type="462c0819:PsiDirectoryNode" />
+              <item name="pachong" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caiji" type="462c0819:PsiDirectoryNode" />
+              <item name="pachong" type="462c0819:PsiDirectoryNode" />
+              <item name="pachong" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caiji" type="462c0819:PsiDirectoryNode" />
+              <item name="pachong" type="462c0819:PsiDirectoryNode" />
+              <item name="pachong" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
@@ -362,22 +420,24 @@
       <workItem from="1574820846674" duration="9045000" />
       <workItem from="1574899562065" duration="21782000" />
       <workItem from="1574985769177" duration="8905000" />
+      <workItem from="1575078801428" duration="6990000" />
+      <workItem from="1575091973837" duration="7018000" />
+      <workItem from="1575100313394" duration="5074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120067000" />
+    <option name="totallyTimeSpent" value="139149000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="649" y="119" width="1043" height="951" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.24520256" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.48321465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50091076" side_tool="true" weight="0.21268657" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37378114" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37163815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,8 +445,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.40520042" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" weight="0.19609967" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37811485" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" weight="0.37811485" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -434,7 +494,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/caiji$main.coverage" NAME="main Coverage Results" MODIFIED="1574755343664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
     <SUITE FILE_PATH="coverage/caiji$other.coverage" NAME="other Coverage Results" MODIFIED="1574754004857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
-    <SUITE FILE_PATH="coverage/caiji$begin.coverage" NAME="begin Coverage Results" MODIFIED="1575017262171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
+    <SUITE FILE_PATH="coverage/caiji$begin.coverage" NAME="begin Coverage Results" MODIFIED="1575105149783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
     <SUITE FILE_PATH="coverage/caiji$manage.coverage" NAME="manage Coverage Results" MODIFIED="1574648081359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/caiji$file.coverage" NAME="file Coverage Results" MODIFIED="1574821322752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
   </component>
@@ -691,16 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="490" column="8" selection-start-line="490" selection-start-column="8" selection-end-line="501" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shell/file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -711,13 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pyvirtualdisplay/abstractdisplay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -725,20 +768,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/ProgramData/Anaconda3/Lib/site-packages/tencentcloud_sdk_python-3.0.111-py3.7.egg!/tencentcloud/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/shell/other.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="212" column="28" lean-forward="true" selection-start-line="212" selection-start-column="28" selection-end-line="212" selection-end-column="28" />
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10317">
+          <caret line="559" column="311" selection-start-line="559" selection-start-column="311" selection-end-line="559" selection-end-column="311" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7560">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <element signature="e#111#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/code.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/gray-code.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="538" column="106" selection-start-line="538" selection-start-column="106" selection-end-line="538" selection-end-column="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shell/begin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        <state relative-caret-position="155">
+          <caret line="350" column="40" selection-start-line="350" selection-start-column="40" selection-end-line="350" selection-end-column="40" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

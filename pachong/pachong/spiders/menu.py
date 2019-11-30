@@ -68,7 +68,6 @@ class Menu2Spider(scrapy.spiders.Spider):
         start_urls.append(item['url'])
         break
 
-
     def parse(self, response):
         items = []
         fp = webdriver.FirefoxProfile()
@@ -538,4 +537,27 @@ class ImgselectSpider(scrapy.spiders.Spider):
         except:
             None
         items.append(item)
+        return items
+
+
+# scrapy crawl list_m
+class ListMSpider(scrapy.spiders.Spider):
+    name = "list_m"
+    start_urls = ['https://burst.shopify.com/free-images']
+
+    def parse(self, response):
+        items = []
+        filename = 'menu.html'
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+        print(response.selector.xpath(
+            '//div[@class="grid grid--equal-height "]/div[@class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third gutter-bottom"]'))
+        for each in response.selector.xpath(
+                '//div[@class="grid grid--equal-height "]/div[@class="grid__item grid__item--tablet-up-half grid__item--desktop-up-third gutter-bottom"]'):
+            print('11111')
+            item = {}
+            item['title'] = each.xpath(
+                './div[@class="tile gutter-bottom gutter-bottom--half tile--shade tile--tall"]/a[@class="tile__link-overlay"]/div[@class="tile__link-overlay__inner tile__link-overlay__inner--bottom-left"]/h3[@class="tile__link-overlay__heading tile__link-overlay__heading--static heading--2"]/text()').extract()
+            print(item['title'])
+            items.append(item)
         return items
