@@ -15,6 +15,7 @@ from Crypto.Cipher import PKCS1_v1_5 as Cipher_pkcs1_v1_5
 from Crypto.PublicKey import RSA
 import base64
 import requests
+from urllib import parse
 import urllib
 DJANGO_PROJECT_PATH = '../../caiji'
 DJANGO_SETTINGS_MODULE = 'caiji.settings'
@@ -467,6 +468,7 @@ def get_file_content(filePath):
 
 
 if __name__ == '__main__':
+    print('quote',parse.quote('translate'))
     # create({
     #     'id': 0,
     #     'size': 0,
@@ -476,7 +478,7 @@ if __name__ == '__main__':
     #     'scale': 0,
     #     'key': 'admin'
     # })
-    # exit()
+    exit()
     # RSAKEY = rsaKey()
     # key = RSAKEY.create_key()
     # PUBLIC_PEM = key['public']

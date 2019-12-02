@@ -2,17 +2,145 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbdc1f9-b943-40f1-ad55-b90529d90640" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pachong/pachong/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/begin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shell/begin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/code.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/code.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/codefull.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/codefull.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/shell/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/cookie.txt" beforeDir="false" afterPath="$PROJECT_DIR$/shell/cookie.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/full_snap.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shell/full_snap2.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/full_snap3.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/full_snap4.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/full_snap5.png" beforeDir="false" afterPath="$PROJECT_DIR$/shell/full_snap5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/00185c7f01427479b8c82656952db430.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/00185c7f01427479b8c82656952db430scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/01298c75f41f2bed14172851d7746bca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/01298c75f41f2bed14172851d7746bcascale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/0409ada9cdeee49c5f9e8d31273bf1a4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2a9517c2c3b69c1e03c72534264a01fd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2a9517c2c3b69c1e03c72534264a01fdscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2c671c34bf3453c18c68cfb8ca0a9dbd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2c671c34bf3453c18c68cfb8ca0a9dbdscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2ced357b57b1948a50ab16d8a2478f66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2ced357b57b1948a50ab16d8a2478f66scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2fac4a37fb76ed8766aa91aa26d44c28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/2fac4a37fb76ed8766aa91aa26d44c28scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/322a02dce7674a8461f6e7e57d55d671.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/322a02dce7674a8461f6e7e57d55d671scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/34868ad48fa995827010e00141c35c2f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/34868ad48fa995827010e00141c35c2fscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/37cc162ba583e931d32fc7484249d5cb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/37cc162ba583e931d32fc7484249d5cbscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/4cef72afa60b8f4db304cc6f11e80127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/4cef72afa60b8f4db304cc6f11e80127scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/503739af23d8a8793d336898e16241a7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/50af15698714e9051356ea983e7d66b9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/50af15698714e9051356ea983e7d66b9scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/55f9ef174108832faa0695cc2d9e79e5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/55f9ef174108832faa0695cc2d9e79e5scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/58b4f0057dbc1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/58b4f0057dbc1scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b3bce127f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b46983773.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b4e8b95e3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b557014a2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b59f83a4a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b5d048fe2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b632d4057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b64b80a05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b66e60f7d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b68cdcf27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b696e1f49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b6a0e1a32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b7f78d360.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b7fe9f7de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b862bf51a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b89fae2fa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b8dbbe7aa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b8eeda7ea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b92ec1051.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b98ee8131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977b98ee8131scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977baa707e8a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977baa707e8ascale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bad8e9f43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bb1f68571.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bbdd072e4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bce13f77e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bce13f77escale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bd3aeca91.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bd3aeca91scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bdbd1de7c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bee23d438.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bee23d438scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bf74d4050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bf74d4050scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bf95e057e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977bf95e057escale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977c021d253d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977c021d253dscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977c0649ae77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977c0649ae77scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977c118bcfc4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5977c2ab812a8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a3ff25f06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a4a8c1f89.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a5b7282da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a5b7282dascale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a721b2328.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a721b2328scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a8ae7df16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a8ae7df16scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a8bebed7f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a8bebed7fscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990a8efe2844.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5990bbdcf3fbd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5a6a8501c7030652e62c036ae24dc94b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/5a6a8501c7030652e62c036ae24dc94bscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/626ba4da3505d61c81470e83b8e7dc77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/626ba4da3505d61c81470e83b8e7dc77scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/6c5a91f646372a5db7982af425f9a1b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/6c5a91f646372a5db7982af425f9a1b1scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/6e4bd5d44e7d52ad89839d4542a2fb20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/6e4bd5d44e7d52ad89839d4542a2fb20scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/7504a3ed3c9ddf0ec9bb3947758c5b43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/7504a3ed3c9ddf0ec9bb3947758c5b43scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/8437e0d68dc0ada1d304381a3cca6f6a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/8437e0d68dc0ada1d304381a3cca6f6ascale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9653cc17a6fe30a4ed53583dac459529.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9653cc17a6fe30a4ed53583dac459529scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/96bc31a0085b51f96b342a11c620774b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/96bc31a0085b51f96b342a11c620774bscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9abcfb987740ddf41432feffa6532e39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9abcfb987740ddf41432feffa6532e39scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9de5ecd35eba3aa4797d19c9efed1789.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9de5ecd35eba3aa4797d19c9efed1789scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9e4ef9d8ab8984b726abb4f4e532a139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/9e4ef9d8ab8984b726abb4f4e532a139scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/a226eb66cf4b2ebb4f35eee6c2716df2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/a226eb66cf4b2ebb4f35eee6c2716df2scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/b0c250f02247a8ed081b5ebf8109b39d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/b0c250f02247a8ed081b5ebf8109b39dscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/b17738fdec8cc8b78ebfd95786dafd12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/b17738fdec8cc8b78ebfd95786dafd12scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/cb500fcd9f3ca1dc6616de51dbc0d39a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/cca37e8b747e5cd991dc47681e033f13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/cca37e8b747e5cd991dc47681e033f13scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/ce8d0ce7a1315dc4340ea9c642913554.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/ce8d0ce7a1315dc4340ea9c642913554scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/d0f0c89e5433311ff293d1687cb3bc90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/d0f0c89e5433311ff293d1687cb3bc90scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/d2fc9d86348d312645b123af710201b9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/d2fc9d86348d312645b123af710201b9scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/d39d85ea4ca16bdf507f5bd0b5158619.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/d39d85ea4ca16bdf507f5bd0b5158619scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/dbe4d9bfead04c117e0bdef4f03da9b4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/dbe4d9bfead04c117e0bdef4f03da9b4scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/ee4002cd585d3567507051ec57add16e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/ee4002cd585d3567507051ec57add16escale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/f070bc82ef2836fdb6b100c35afd6d44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/f070bc82ef2836fdb6b100c35afd6d44scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/f51fb7d6cb400e55e696e014489a41a3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shell/img/f51fb7d6cb400e55e696e014489a41a3scale.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +170,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shell/begin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="350" column="40" selection-start-line="350" selection-start-column="40" selection-end-line="350" selection-end-column="40" />
+            <state relative-caret-position="228">
+              <caret line="219" column="67" lean-forward="true" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="67" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -55,15 +183,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shell/code.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shell/other.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="188">
+              <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="206" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,8 +206,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10317">
-              <caret line="559" column="311" selection-start-line="559" selection-start-column="311" selection-end-line="559" selection-end-column="311" />
+            <state relative-caret-position="266">
+              <caret line="26" selection-start-line="26" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -90,9 +216,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/waiguo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-401">
+              <caret line="263" column="44" lean-forward="true" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shell/waiguoOs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="49" />
+              <folding>
+                <element signature="e#421#430#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/BaiduTransAPI-forPython3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <folding>
+                <element signature="e#77#95#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pachong/menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
+            <state relative-caret-position="10222">
               <caret line="538" column="106" selection-start-line="538" selection-start-column="106" selection-end-line="538" selection-end-column="106" />
             </state>
           </provider>
@@ -117,6 +288,7 @@
       <find>executable_path</find>
       <find>rid grid--equal-height</find>
       <find>grid__item grid__item--tablet-up-half grid__item--desktop-up-third gutter-bottom</find>
+      <find>js-download-premium js-open-contextual-subscribe-modal-on-third marketing-button photo-tile__action js-track-photo-stat-click tile__overlay-trigger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,16 +309,20 @@
         <option value="$PROJECT_DIR$/shell/main.py" />
         <option value="$PROJECT_DIR$/admin/models.py" />
         <option value="$PROJECT_DIR$/shell/other.py" />
-        <option value="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" />
         <option value="D:/ProgramData/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py" />
+        <option value="$PROJECT_DIR$/pachong/pachong/settings.py" />
+        <option value="$PROJECT_DIR$/pachong/pachong/spiders/menu.py" />
+        <option value="$PROJECT_DIR$/shell/content.html" />
         <option value="$PROJECT_DIR$/shell/begin.py" />
+        <option value="$PROJECT_DIR$/shell/waiguo.py" />
+        <option value="$PROJECT_DIR$/shell/waiguoOs.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="649" />
-    <option name="y" value="119" />
-    <option name="width" value="1043" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="707" />
+    <option name="y" value="20" />
+    <option name="width" value="1621" />
     <option name="height" value="951" />
   </component>
   <component name="ProjectId" id="1T3Wh6l5Fe9p4TCcSvBdSNurWg8" />
@@ -171,24 +347,6 @@
             <path>
               <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
               <item name="caiji" type="462c0819:PsiDirectoryNode" />
-              <item name="pachong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caiji" type="462c0819:PsiDirectoryNode" />
-              <item name="pachong" type="462c0819:PsiDirectoryNode" />
-              <item name="pachong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caiji" type="462c0819:PsiDirectoryNode" />
-              <item name="pachong" type="462c0819:PsiDirectoryNode" />
-              <item name="pachong" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="caiji" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caiji" type="462c0819:PsiDirectoryNode" />
               <item name="shell" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -202,7 +360,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Documents/pubg-game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shell" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -231,7 +389,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.begin">
+  <component name="RunManager" selected="Python.waiguo">
     <configuration name="begin" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="caiji" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,7 +478,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="other" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="waiguo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="caiji" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -333,7 +491,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shell/other.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shell/waiguo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -370,17 +528,17 @@
       <item itemvalue="Django server.caiji" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.other" />
       <item itemvalue="Python.file" />
       <item itemvalue="Python.begin" />
+      <item itemvalue="Python.waiguo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.waiguo" />
         <item itemvalue="Python.begin" />
+        <item itemvalue="Python.manage" />
         <item itemvalue="Python.file" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.other" />
-        <item itemvalue="Python.manage" />
       </list>
     </recent_temporary>
   </component>
@@ -423,21 +581,25 @@
       <workItem from="1575078801428" duration="6990000" />
       <workItem from="1575091973837" duration="7018000" />
       <workItem from="1575100313394" duration="5074000" />
+      <workItem from="1575246390065" duration="3122000" />
+      <workItem from="1575255180327" duration="11602000" />
+      <workItem from="1575273328873" duration="5153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139149000" />
+    <option name="totallyTimeSpent" value="159026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="649" y="119" width="1043" height="951" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.48321465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50091076" side_tool="true" weight="0.21268657" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37163815" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3716143" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -446,7 +608,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37811485" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" weight="0.37811485" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" weight="0.14951245" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -454,6 +616,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.26119402" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.50091076" side_tool="true" weight="0.21268657" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3716143" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37811485" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" visible="true" weight="0.14951245" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -493,9 +678,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/caiji$main.coverage" NAME="main Coverage Results" MODIFIED="1574755343664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
+    <SUITE FILE_PATH="coverage/caiji$waiguo.coverage" NAME="waiguo Coverage Results" MODIFIED="1575275039073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
     <SUITE FILE_PATH="coverage/caiji$other.coverage" NAME="other Coverage Results" MODIFIED="1574754004857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
-    <SUITE FILE_PATH="coverage/caiji$begin.coverage" NAME="begin Coverage Results" MODIFIED="1575105149783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
-    <SUITE FILE_PATH="coverage/caiji$manage.coverage" NAME="manage Coverage Results" MODIFIED="1574648081359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/caiji$begin.coverage" NAME="begin Coverage Results" MODIFIED="1575256918718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
+    <SUITE FILE_PATH="coverage/caiji$manage.coverage" NAME="manage Coverage Results" MODIFIED="1575254903945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/caiji$file.coverage" NAME="file Coverage Results" MODIFIED="1574821322752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
   </component>
   <component name="editorHistoryManager">
@@ -590,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="49" />
-          <folding>
-            <element signature="e#421#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -639,79 +815,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shell/img/1574667691/44ddae5b07782447ffaf19b5ef1faa77.png" />
     <entry file="file://$PROJECT_DIR$/shell/img/1574667691/44ddae5b07782447ffaf19b5ef1faa77 (1).png" />
-    <entry file="file://$PROJECT_DIR$/shell/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#10933#10937#0#HTML" expanded="true" />
-            <element signature="e#10978#10982#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#4;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#5;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#6;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#6;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#7;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#7;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#8;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#8;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#10;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#10;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#10;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#11;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#11;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#11;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#12;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#12;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#12;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#12;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#12;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#13;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#13;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#13;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#a#1;n#div#13;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#14;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#14;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#a#1;n#div#14;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#15;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#15;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#a#1;n#div#15;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#16;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#16;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#a#1;n#div#16;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#17;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#17;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#1;n#div#0;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#a#1;n#div#18;n#div#1;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#p#1;n#div#1;n#div#1;n#div#1;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#2;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#2;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shell/img/1574670427/bmw_m8-007.jpg" />
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/selenium/webdriver/remote/remote_connection.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -771,30 +874,6 @@
     <entry file="jar://D:/ProgramData/Anaconda3/Lib/site-packages/tencentcloud_sdk_python-3.0.111-py3.7.egg!/tencentcloud/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/other.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10317">
-          <caret line="559" column="311" selection-start-line="559" selection-start-column="311" selection-end-line="559" selection-end-column="311" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pytesseract/pytesseract.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7560">
@@ -805,26 +884,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/code.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/shell/gray-code.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/shell/code.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/django/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/django/core/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="581" column="33" selection-start-line="581" selection-start-column="22" selection-end-line="581" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/page1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="52" column="71" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="e#421#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BaiduTransAPI-forPython3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="e#77#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pachong/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
+        <state relative-caret-position="10222">
           <caret line="538" column="106" selection-start-line="538" selection-start-column="106" selection-end-line="538" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" selection-start-line="26" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/waiguo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="263" column="44" lean-forward="true" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shell/begin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="350" column="40" selection-start-line="350" selection-start-column="40" selection-end-line="350" selection-end-column="40" />
+        <state relative-caret-position="228">
+          <caret line="219" column="67" lean-forward="true" selection-start-line="219" selection-start-column="8" selection-end-line="219" selection-end-column="67" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/other.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="161" column="4" selection-start-line="161" selection-start-column="4" selection-end-line="206" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/waiguoOs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -143,12 +143,7 @@ DOWNLOAD_HANDLERS = {'s3': None}
 DOWNLOAD_DELAY = 1
 DOWNLOAD_TIMEOUT = 100
 
-DJANGO_PROJECT_PATH = '../../caiji'
-DJANGO_SETTINGS_MODULE = 'caiji.settings'
 
-sys.path.insert(0, DJANGO_PROJECT_PATH)
-os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
-application = get_wsgi_application()
 
 CONCURRENT_REQUESTS_PER_IP = 1
 

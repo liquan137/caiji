@@ -3,6 +3,16 @@ from scrapy.selector import Selector
 from ..items import *
 from pypinyin import pinyin, lazy_pinyin
 from ..pipelines import *
+from django.core.wsgi import get_wsgi_application
+import sys
+import os
+
+DJANGO_PROJECT_PATH = '../../../caiji'
+DJANGO_SETTINGS_MODULE = 'caiji.settings'
+
+sys.path.insert(0, DJANGO_PROJECT_PATH)
+os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
+application = get_wsgi_application()
 from admin.models import *
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -14,6 +24,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import os
+import http.client
+import hashlib
+import random
+import json
+from urllib import parse
 from django.db import close_old_connections
 
 
@@ -540,6 +555,49 @@ class ImgselectSpider(scrapy.spiders.Spider):
         return items
 
 
+def baidu(q):
+    appid = '20191202000362221'  # 填写你的appid
+    secretKey = '4YLuhrQwQ689G3oK4z9r'  # 填写你的密钥
+
+    httpClient = None
+    myurl = '/api/trans/vip/translate'
+
+    fromLang = 'auto'  # 原文语种
+    toLang = 'zh'  # 译文语种
+    salt = random.randint(32768, 65536)
+    print('salt', salt)
+    sign = str(appid) + str(q) + str(salt) + str(secretKey)
+    sign = hashlib.md5(sign.encode()).hexdigest()
+    q = str(q)
+    print('quote', parse.quote(q))
+    myurl = myurl + '?appid=' + str(appid) + '&q=' + parse.quote(
+        q) + '&from=' + fromLang + '&to=' + toLang + '&salt=' + str(
+        salt) + '&sign=' + sign
+    title = False
+    try:
+        httpClient = http.client.HTTPConnection('api.fanyi.baidu.com')
+        httpClient.request('GET', myurl)
+
+        # response是HTTPResponse对象
+        response = httpClient.getresponse()
+        result_all = response.read().decode("utf-8")
+        result = json.loads(result_all)
+        print('result', result)
+        print('result', result['trans_result'])
+        print('result', result['trans_result'][0]['dst'])
+        title = result['trans_result'][0]['dst']
+        return result['trans_result'][0]['dst']
+
+    except Exception as e:
+        print(e)
+        return False
+    # finally:
+    #     if httpClient:
+    #         httpClient.close()
+    #     return False
+    return title
+
+
 # scrapy crawl list_m
 class ListMSpider(scrapy.spiders.Spider):
     name = "list_m"
@@ -559,5 +617,21 @@ class ListMSpider(scrapy.spiders.Spider):
             item['title'] = each.xpath(
                 './div[@class="tile gutter-bottom gutter-bottom--half tile--shade tile--tall"]/a[@class="tile__link-overlay"]/div[@class="tile__link-overlay__inner tile__link-overlay__inner--bottom-left"]/h3[@class="tile__link-overlay__heading tile__link-overlay__heading--static heading--2"]/text()').extract()
             print(item['title'])
+            href = each.xpath(
+                './div[@class="tile gutter-bottom gutter-bottom--half tile--shade tile--tall"]/a[@class="tile__link-overlay"]/@href').extract()[
+                0]
+            for childItem in each.xpath(
+                    './div[@class="scrollable-carousel--xsmall js-scrollable-carousel scrollable-carousel--small js-scrollable-carousel"]/div[@class="scrollable-carousel__content-wrapper js-scrollable-carousel-content-wrapper"]/div[@class="scrollable-carousel__item"]'):
+                childHref = childItem.xpath(
+                    './div[@class="tile tile--overlay-static"]/a[@class="tile__link-overlay"]/@href').extract()[0]
+                childTitle = childItem.xpath(
+                    './div[@class="tile tile--overlay-static"]/a[@class="tile__link-overlay"]/h4/text()').extract()[0]
+                title = baidu(childTitle)
+                try:
+                    m_c_project.objects.get(title=title)
+                except:
+                    child = m_c_project(title=title, contact_id=16, url='https://burst.shopify.com' + childHref)
+                    child.save()
             items.append(item)
         return items
+
