@@ -468,7 +468,7 @@ def get_file_content(filePath):
 
 
 if __name__ == '__main__':
-    print('quote',parse.quote('translate'))
+    # print('quote',parse.quote('translate'))
     # create({
     #     'id': 0,
     #     'size': 0,
@@ -478,7 +478,7 @@ if __name__ == '__main__':
     #     'scale': 0,
     #     'key': 'admin'
     # })
-    exit()
+    # exit()
     # RSAKEY = rsaKey()
     # key = RSAKEY.create_key()
     # PUBLIC_PEM = key['public']

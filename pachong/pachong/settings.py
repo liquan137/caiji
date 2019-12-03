@@ -11,7 +11,12 @@
 import os
 import sys
 from django.core.wsgi import get_wsgi_application
+DJANGO_PROJECT_PATH = '..\\..\\caiji'
+DJANGO_SETTINGS_MODULE = 'caiji.settings'
 
+sys.path.insert(0, DJANGO_PROJECT_PATH)
+os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
+application = get_wsgi_application()
 PROXIES = [{"IP": "223.156.198.52", "Port": 19069}, {"IP": "1.57.193.66", "Port": 23180},
            {"IP": "182.98.37.142", "Port": 32810}, {"IP": "27.191.74.226", "Port": 41013},
            {"IP": "117.26.228.220", "Port": 37584}, {"IP": "223.240.229.190", "Port": 39148},

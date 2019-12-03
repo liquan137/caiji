@@ -40,14 +40,6 @@ class m_project(models.Model):
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
 
 
-class m_menu(models.Model):
-    title_l = models.CharField(max_length=80, help_text="标题组合一")
-    title_r = models.CharField(max_length=80, help_text="标题组合二")
-    contact = models.IntegerField(help_text="链接ID", default=0)
-    update_time = models.IntegerField(help_text="更新时间", default=1571453334)
-    create_time = models.IntegerField(help_text="创建时间", default=1571453334)
-
-
 class m_project_keyword(models.Model):
     contact = models.ForeignKey('m_project', on_delete=models.CASCADE)
     keyword = models.CharField(max_length=50, help_text="关键词", unique=True)
@@ -57,6 +49,7 @@ class m_project_keyword(models.Model):
 class m_content_url(models.Model):
     url = models.CharField(max_length=100, help_text="地址", unique=True)
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
+
 
 
 class m_page_url(models.Model):

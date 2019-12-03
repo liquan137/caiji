@@ -74,7 +74,7 @@ def createFile():
 def returnUrl():
     start_urls = []
     index = 0
-    urls = m_c_project.objects.filter(contact_id=16).values()
+    urls = m_c_project.objects.filter(contact_id=16, use=0).values()
     for item in urls:
         start_urls.append({
             'url': item['url'],
@@ -122,16 +122,30 @@ def scaleCutImg(path, filename, id, title, url):
     path_arr = filename.split('.')
     print(path_arr)
     img.thumbnail((int(img.size[0] * scale), int(img.size[1] * scale)))
-    img.save(path + '/%sview.%s' % (path_arr[0], path_arr[1]))
-    viewName = str(round(name)) + 'view' + '.png'
-    with open(path + '/%sscale.%s' % (path_arr[0], path_arr[1]), 'rb') as fp:
-        response = client.put_object(
-            Bucket=tong,
-            Body=fp,
-            Key=viewName,
-            StorageClass='STANDARD',
-            EnableMD5=False
-        )
+    try:
+        img.save(path + '/%sscale.%s' % (path_arr[0], path_arr[1]))
+        scaleName = str(round(name)) + 'scale' + '.' + path_arr[1]
+        viewName = str(round(name)) + 'view' + '.' + path_arr[1]
+        with open(path + '/%sscale.%s' % (path_arr[0], path_arr[1]), 'rb') as fp:
+            response = client.put_object(
+                Bucket=tong,
+                Body=fp,
+                Key='/scale/' + viewName,
+                StorageClass='STANDARD',
+                EnableMD5=False
+            )
+    except:
+        img.save(path + '/%sscale.%s' % (path_arr[0], 'png'))
+        scaleName = str(round(name)) + 'scale' + '.png'
+        viewName = str(round(name)) + 'view' + '.png'
+        with open(path + '/%sscale.%s' % (path_arr[0], path_arr[1]), 'rb') as fp:
+            response = client.put_object(
+                Bucket=tong,
+                Body=fp,
+                Key='/scale/' + viewName,
+                StorageClass='STANDARD',
+                EnableMD5=False
+            )
     print('图片缩放完成，文件名：' + '%sscale.%s' % (path_arr[0], path_arr[1]), 'success')
     if img.size[0] > 1000:
         print('尺寸', scale, '/', (int(img.size[0] * scale), int(img.size[1] * scale)))
@@ -143,30 +157,43 @@ def scaleCutImg(path, filename, id, title, url):
                 img = Image.open(path + '/%sscale.%s' % (path_arr[0], path_arr[1]))
                 img.thumbnail((int(img.size[0] * 0.7), int(img.size[1] * 0.7)))
                 img.save(path + '/%sscale.%s' % (path_arr[0], path_arr[1]))
-                scaleName = str(round(name)) + 'scale' + '.' + path_arr[1]
+                pathFile = path + '/%sscale.%s' % (path_arr[0], path_arr[1])
+                scaleName = str(round(name)) + '.' + path_arr[1]
             except:
                 os.remove(path + '/%sscale.%s' % (path_arr[0], 'png'))
                 cropped.save(path + '/%sscale.%s' % (path_arr[0], 'png'))
                 img = Image.open(path + '/%sscale.%s' % (path_arr[0], 'png'))
                 img.thumbnail((int(img.size[0] * 0.7), int(img.size[1] * 0.7)))
                 img.save(path + '/%sscale.%s' % (path_arr[0], 'png'))
-                scaleName = str(round(name)) + 'scale' + '.png'
+                pathFile = path + '/%sscale.%s' % (path_arr[0], 'png')
+                scaleName = str(round(name)) + '.png'
             print('缩放剪裁完成，文件名：' + '%sscale.%s' % (path_arr[0], path_arr[1]), 'success')
-            with open(path + '/%sscale.%s' % (path_arr[0], path_arr[1]), 'rb') as fp:
-                response = client.put_object(
-                    Bucket=tong,
-                    Body=fp,
-                    Key='/scale/' + str(round(name)) + '.' + path_arr[1],
-                    StorageClass='STANDARD',
-                    EnableMD5=False
-                )
+    try:
+        with open(path + '/' + '%sscale.%s' % (path_arr[0], path_arr[1]), 'rb') as fp:
+            response = client.put_object(
+                Bucket=tong,
+                Body=fp,
+                Key='/scale/' + scaleName,
+                StorageClass='STANDARD',
+                EnableMD5=False
+            )
+    except:
+        with open(path + '/' + '%sscale.%s' % (path_arr[0], 'png'), 'rb') as fp:
+            response = client.put_object(
+                Bucket=tong,
+                Body=fp,
+                Key='/scale/' + scaleName,
+                StorageClass='STANDARD',
+                EnableMD5=False
+            )
+        os.remove(path + '/' + '%sscale.%s' % (path_arr[0], 'png'))
     try:
         os.remove(path + '/' + filename)
         os.remove(path + '/' + '%sscale.%s' % (path_arr[0], path_arr[1]))
     except:
         print('存在未删除的图片，请稍后自行删除')
     try:
-        m_c_project.objects.get(title=title)
+        m_project.objects.get(title=title)
     except:
         print(title)
         child = m_project(contact_id=id, url=url, title=title, down_png=downName,
@@ -200,20 +227,29 @@ def caiji():
         time.sleep(1)
         driver.get(url['url'])
         filename = 'content.html'
+        driver.save_screenshot('page0.png')
         with open(filename, 'wb') as f:
             f.write(driver.page_source.encode('utf-8'))
             print('保存采集HTML', 'success')
         # 模拟点击，进行下载
         time.sleep(1)
-        href = driver.find_element_by_xpath('//span[@class="last"]/a').get_attribute('href')
-        # driver.find_element_by_xpath('//span[@class="last"]/a').click()
-        count = href.split('page=')[1]
-        href = href.split('page=')[0] + 'page='
+        driver.save_screenshot('page0.png')
+        try:
+            href = driver.find_element_by_xpath('//span[@class="last"]/a').get_attribute('href')
+            count = href.split('page=')[1]
+            href = href.split('page=')[0] + 'page='
+        except:
+            count = 1
+            href = url['url'] + '?page='
+        driver.save_screenshot('page0.png')
+        print(count)
+
         try:
             for i in range(int(count)):
                 if i != 0:
                     driver.get(href + str(i))
-                    time.sleep(2)
+                    time.sleep(4)
+                    print('打开目标子网站', 'success')
                     driver.save_screenshot('page%s.png' % (i))
                     for each in driver.find_elements_by_xpath(
                             '//div[@class="js-masonry-grid"]/div[@class="grid__item grid__item--desktop-up-third"]'):
@@ -222,12 +258,17 @@ def caiji():
                         title = element.get_attribute(
                             'data-photo-title')
                         title = baidu(title)
-                        try:
-                            m_c_project.objects.get(title=title)
-                        except:
+                        filename = element.get_attribute(
+                            'data-modal-image-url')
+                        fileUrl = filename
+                        print('ddd', m_project.objects.filter(url=fileUrl).count())
+                        print('ttt', m_project.objects.filter(
+                            title=title).count())
+                        if m_project.objects.filter(url=fileUrl).count() > 0 or m_project.objects.filter(
+                                title=title).count() > 0:
+                            pass
+                        else:
                             driver.execute_script("arguments[0].click();", element)
-                            filename = element.get_attribute(
-                                'data-modal-image-url')
                             print(filename)
                             print(filename.split('/'))
                             print(filename.split('/')[4].split('?')[0])
@@ -245,15 +286,17 @@ def caiji():
                                     runtime += 1
                                     if runtime == 120:
                                         print('下载超时！退出程序')
-                                        exit()
+                                        break
                                 else:
                                     print('下载完成', '下载用时：', runtime)
-                                    scaleCutImg(path, name, url['id'], title, url['url'])
+                                    scaleCutImg(path, name, url['id'], title, fileUrl)
                                     break
                             print('下载文件的名称：' + name, 'success')
+            com = m_c_project.objects.get(id=url['id'])
+            com.use = 2
+            com.save()
         except:
             print('采集出现错误，关闭驱动,005')
-            driver.quit()
     # os.remove(path)
     driver.quit()
     print('采集完成，关闭驱动,006')
@@ -299,10 +342,7 @@ def baidu(q):
 
 
 def main():
-    try:
-        caiji()
-    except:
-        exit()
+    caiji()
 
 
 def get_file_content(filePath):

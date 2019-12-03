@@ -7,12 +7,7 @@ from django.core.wsgi import get_wsgi_application
 import sys
 import os
 
-DJANGO_PROJECT_PATH = '../../../caiji'
-DJANGO_SETTINGS_MODULE = 'caiji.settings'
 
-sys.path.insert(0, DJANGO_PROJECT_PATH)
-os.environ['DJANGO_SETTINGS_MODULE'] = DJANGO_SETTINGS_MODULE
-application = get_wsgi_application()
 from admin.models import *
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -387,21 +382,21 @@ class Menu3Spider(scrapy.spiders.Spider):
     name = "menu_3"
     allowed_domains = [""]
     start_urls = [
-        "https://www.ivsky.com/bizhi/",
+        "https://www.ivsky.com/tupian",
     ]
 
     def parse(self, response):
         items = []
         filename = 'menu.html'
-        start_urls = "https://www.ivsky.com/bizhi"
+        start_urls = "https://www.ivsky.com/tupian"
         with open(filename, 'wb') as f:
             f.write(response.body)
-        for each in response.selector.xpath('//ul[@class="bzmenu"]/li'):
+        for each in response.selector.xpath('//ul[@class="tpmenu"]/li'):
             item = {}
             item['title'] = each.xpath('./a/text()').extract()[0]
             item['url'] = start_urls + each.xpath('./a/@href').extract()[0]
             try:
-                father = m_c_project(contact_id=5, url=item['url'], title=item['title'],
+                father = m_c_project(contact_id=16, url=item['url'], title=item['title'],
                                      update_time=round(time.time()),
                                      create_time=round(time.time()))
                 father.save()
@@ -416,10 +411,10 @@ class Menu3Spider(scrapy.spiders.Spider):
 class List2Spider(scrapy.spiders.Spider):
     name = "list2"
     allowed_domains = [""]
-    urls = list(m_c_project.objects.filter(contact_id=5).values())
+    urls = list(m_c_project.objects.filter(contact_id=16).values())
     start_urls = []
     for urlItem in range(0, 100):
-        start_urls.append("https://www.ivsky.com/bizhi/" + 'index_' + str(urlItem) + '.html')
+        start_urls.append("https://www.ivsky.com/tupian/" + 'index_' + str(urlItem) + '.html')
 
     def parse(self, response):
         items = []
@@ -432,7 +427,7 @@ class List2Spider(scrapy.spiders.Spider):
             item['title'] = each.xpath('./p/a/text()').extract()[0]
             item['url'] = start_urls + each.xpath('./p/a/@href').extract()[0]
             try:
-                father = m_contents_url(url=item['url'], create_time=round(time.time()))
+                father = m_content_url(url=item['url'], create_time=round(time.time()))
                 father.save()
             except:
                 None
@@ -442,38 +437,39 @@ class List2Spider(scrapy.spiders.Spider):
 
 # 爬取天堂图片网
 # scrapy crawl list3
-# class List3Spider(scrapy.spiders.Spider):
-#     name = "list3"
-#     allowed_domains = [""]
-#     urls = list(m_contents_url.objects.all().values())
-#     start_urls = []
-#     for urlItem in urls:
-#         url = urlItem['url'].split('/bizhi')
-#         start_urls.append('https://www.ivsky.com/bizhi' + url[2])
-#
-#     for urlItem in range(1447, 1510):
-#         print(urls[urlItem])
-#         url = urls[urlItem]['url'].split('/bizhi')
-#         print('当前位置：', urlItem)
-#         start_urls.append('https://www.ivsky.com/bizhi' + url[2])
-#
-#     def parse(self, response):
-#         items = []
-#         filename = 'menu.html'
-#         start_urls = "https://www.ivsky.com"
-#         with open(filename, 'wb') as f:
-#             f.write(response.body)
-#         for each in response.selector.xpath('//ul[@class="pli"]/li'):
-#             item = {}
-#             item['title'] = each.xpath('./p/a/text()').extract()[0]
-#             item['url'] = start_urls + each.xpath('./p/a/@href').extract()[0]
-#             try:
-#                 father = m_page_url(url=item['url'], create_time=round(time.time()))
-#                 father.save()
-#             except:
-#                 None
-#             items.append(item)
-#         return items
+class List3Spider(scrapy.spiders.Spider):
+    name = "list3"
+    allowed_domains = [""]
+    urls = list(m_content_url.objects.all().values())
+    start_urls = []
+    for urlItem in urls:
+        url = urlItem['url'].split('/tupian')
+        print(url)
+        start_urls.append('https://www.ivsky.com/tupian' + url[1])
+
+    # for urlItem in range(1447, 1510):
+    #     print(urls[urlItem])
+    #     url = urls[urlItem]['url'].split('/tupian')
+    #     print('当前位置：', urlItem)
+    #     start_urls.append('https://www.ivsky.com/tupian' + url[2])
+
+    def parse(self, response):
+        items = []
+        filename = 'menu.html'
+        start_urls = "https://www.ivsky.com"
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+        for each in response.selector.xpath('//ul[@class="pli"]/li'):
+            item = {}
+            item['title'] = each.xpath('./p/a/text()').extract()[0]
+            item['url'] = start_urls + each.xpath('./p/a/@href').extract()[0]
+            try:
+                father = m_page_url(url=item['url'], create_time=round(time.time()))
+                father.save()
+            except:
+                None
+            items.append(item)
+        return items
 
 
 # 爬取天堂图片网

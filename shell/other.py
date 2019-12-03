@@ -248,8 +248,6 @@ def caiji():
     chrome_options = Options()
     # chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
     chrome_options.add_argument('--disable-gpu')
-    chrome_options.add_argument(
-        'user-agent="Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36"')
     chrome_options.add_argument('blink-settings=imagesEnabled=false')  # 不加载图片, 提升速度
     chrome_options.add_argument('--no-sandbox')
     # chrome_options.add_argument('Referer=' + url)
@@ -257,48 +255,44 @@ def caiji():
     prefs = {"download.default_directory": path}
     chrome_options.add_experimental_option("prefs", prefs)
     driver = webdriver.Chrome(options=chrome_options, executable_path=os.getcwd() + '/' + 'chromedriver')
-    try:
-        for url in start_urls:
-            driver.get(url['url'])
-            filename = 'content.html'
-            with open(filename, 'wb') as f:
-                f.write(driver.page_source.encode('utf-8'))
-                print('保存采集HTML', 'success')
-            # 模拟点击，进行下载
+    for url in start_urls:
+        driver.get(url['url'])
+        filename = 'content.html'
+        with open(filename, 'wb') as f:
+            f.write(driver.page_source.encode('utf-8'))
+            print('保存采集HTML', 'success')
+        # 模拟点击，进行下载
 
-            # driver.quit()
-            download_url = driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').get_attribute('href')
-            img = download_url.split('/')[len(download_url.split('/')) - 1].split('?')
-            filename = img[0]
-            title = driver.find_element_by_xpath('//div[@id="al_tit"]/h1').text
-            print('下载文件的名称：' + filename, 'success')
-            id_title = driver.find_element_by_xpath('//div[@class="pos"]/a[3]').text
-            id = m_c_project.objects.get(title=id_title).id
-            isExists = path + '/' + filename
-            driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').click()
-            runtime = 0
-            while True:
-                print('没有文件')
-                if not os.path.exists(isExists):
-                    print('没有文件', '下载用时：', runtime)
-                    time.sleep(1)
-                    runtime += 1
-                    if runtime == 15:
-                        print('下载超时！退出程序')
-                        exit()
-                else:
-                    print('下载完成', '下载用时：', runtime)
-                    break
-            scaleCutImg(path, filename, id, title, url['url'])
-            # 已经采集完图片的，就修改数据库中的采集状态
-            commit = m_page_url.objects.get(id=url['id'])
-            commit.use = 3
-            commit.save()
-        driver.quit()
-        print('采集脚本完成，释放浏览器')
-    except:
-        print('采集脚本遇到错误，自动释放')
-        driver.quit()
+        # driver.quit()
+        download_url = driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').get_attribute('href')
+        img = download_url.split('/')[len(download_url.split('/')) - 1].split('?')
+        filename = img[0]
+        title = driver.find_element_by_xpath('//div[@id="al_tit"]/h1').text
+        print('下载文件的名称：' + filename, 'success')
+        id_title = driver.find_element_by_xpath('//div[@class="pos"]/a[3]').text
+        print('title', id_title)
+        id = m_c_project.objects.get(title=id_title).id
+        print('id', id)
+        isExists = path + '/' + filename
+        driver.find_element_by_xpath('//div[@id="pic_btn"]/a[3]').click()
+        runtime = 0
+        while True:
+            print('没有文件')
+            if not os.path.exists(isExists):
+                print('没有文件', '下载用时：', runtime)
+                time.sleep(1)
+                runtime += 1
+                if runtime == 15:
+                    print('下载超时！退出程序')
+                    exit()
+            else:
+                print('下载完成', '下载用时：', runtime)
+                break
+        scaleCutImg(path, filename, id, title, url['url'])
+        # 已经采集完图片的，就修改数据库中的采集状态
+        commit = m_page_url.objects.get(id=url['id'])
+        commit.use = 3
+        commit.save()
 
 
 def main():
