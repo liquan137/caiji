@@ -51,6 +51,19 @@ class m_content_url(models.Model):
     create_time = models.IntegerField(help_text="创建时间", default=1571453334)
 
 
+class m_navbar(models.Model):
+    title_f = models.CharField(max_length=80, help_text="首推关键词一")
+    title_c = models.CharField(max_length=80, help_text="首推关键词二")
+    contact_id = models.IntegerField(help_text="链接ID", default=0)
+    contact_type = models.IntegerField(help_text="链接级别 1：一级； 2：二级", default=0)
+    create_time = models.IntegerField(help_text="创建时间", default=1571453334)
+
+
+class m_json(models.Model):
+    create_time = models.IntegerField(help_text="创建时间", default=1571453334)
+    path = models.CharField(max_length=80, help_text="json存储位置")
+    title = models.CharField(max_length=80, help_text="缓存标识", unique=True)
+
 
 class m_page_url(models.Model):
     url = models.CharField(max_length=100, help_text="地址", unique=True)
