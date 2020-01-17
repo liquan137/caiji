@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbdc1f9-b943-40f1-ad55-b90529d90640" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0002_auto_20191101_1042.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0003_auto_20191101_1052.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0004_auto_20191102_1123.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0005_m_project_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0006_auto_20191102_1150.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0007_m_content_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0008_m_contents_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0009_m_page_url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0010_m_project_scale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0011_m_page_url_use.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0012_auto_20191128_0846.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0013_m_menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0014_auto_20191204_1055.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0015_m_navbar_contact_type.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/0016_m_json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiji/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiji/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shell/other.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5282">
-              <caret line="294" column="21" selection-end-line="305" />
+            <state relative-caret-position="1957">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -48,86 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="61" column="12" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/caiji/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pachong/pachong/spiders/menu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8075">
-              <caret line="451" column="53" selection-start-line="451" selection-start-column="53" selection-end-line="451" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shell/waiguo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4598">
-              <caret line="263" column="44" selection-start-line="263" selection-start-column="44" selection-end-line="263" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shell/waiguoOs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2394">
-              <caret line="147" column="13" selection-end-line="354" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pachong/pachong/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-              <folding>
-                <element signature="e#421#430#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/BaiduTransAPI-forPython3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-              <folding>
-                <element signature="e#77#95#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pachong/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            <state relative-caret-position="456">
+              <caret line="167" column="9" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -182,11 +121,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="369" />
-    <option name="y" value="82" />
-    <option name="width" value="1621" />
-    <option name="height" value="951" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="116" />
+    <option name="y" value="41" />
+    <option name="width" value="1720" />
+    <option name="height" value="950" />
   </component>
   <component name="ProjectId" id="1T3Wh6l5Fe9p4TCcSvBdSNurWg8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -228,7 +167,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shell" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tpAdmin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -455,21 +394,53 @@
       <workItem from="1575334411814" duration="1850000" />
       <workItem from="1575343744138" duration="6334000" />
       <workItem from="1575425671219" duration="5696000" />
+      <workItem from="1575682449270" duration="4736000" />
+      <workItem from="1575956828099" duration="2879000" />
+      <workItem from="1576023730671" duration="3986000" />
+      <workItem from="1576118822520" duration="2373000" />
+      <workItem from="1576294177159" duration="1940000" />
+      <workItem from="1576466781012" duration="5111000" />
+      <workItem from="1576568887285" duration="637000" />
+      <workItem from="1576715309096" duration="592000" />
+      <workItem from="1576820601185" duration="1961000" />
+      <workItem from="1576892726914" duration="1525000" />
+      <workItem from="1577063293102" duration="2015000" />
+      <workItem from="1577155336886" duration="1219000" />
+      <workItem from="1577244749116" duration="1222000" />
+      <workItem from="1577260774998" duration="557000" />
+      <workItem from="1577324692414" duration="7207000" />
+      <workItem from="1577691503438" duration="2440000" />
+      <workItem from="1577755185554" duration="426000" />
+      <workItem from="1577949102468" duration="822000" />
+      <workItem from="1578029612469" duration="1241000" />
+      <workItem from="1578100307151" duration="624000" />
+      <workItem from="1578376659036" duration="575000" />
+      <workItem from="1578382156906" duration="1466000" />
+      <workItem from="1578446045877" duration="5284000" />
+      <workItem from="1578532003415" duration="1398000" />
+      <workItem from="1578552119530" duration="691000" />
+      <workItem from="1578642998347" duration="641000" />
+      <workItem from="1578702677011" duration="5135000" />
+      <workItem from="1578873995744" duration="594000" />
+      <workItem from="1579052093865" duration="3625000" />
+      <workItem from="1579135925825" duration="1225000" />
+      <workItem from="1579219557785" duration="583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173199000" />
+    <option name="totallyTimeSpent" value="237929000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="116" y="41" width="1720" height="950" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.27238807" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908924" visible="true" weight="0.2933735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50091076" side_tool="true" weight="0.21268657" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3716143" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -478,7 +449,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37811485" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" visible="true" weight="0.39761648" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" visible="true" weight="0.14810282" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -551,7 +522,7 @@
     <SUITE FILE_PATH="coverage/caiji$waiguo.coverage" NAME="waiguo Coverage Results" MODIFIED="1575275039073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
     <SUITE FILE_PATH="coverage/caiji$other.coverage" NAME="other Coverage Results" MODIFIED="1574754004857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
     <SUITE FILE_PATH="coverage/caiji$begin.coverage" NAME="begin Coverage Results" MODIFIED="1575342686609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
-    <SUITE FILE_PATH="coverage/caiji$manage.coverage" NAME="manage Coverage Results" MODIFIED="1575343898716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/caiji$manage.coverage" NAME="manage Coverage Results" MODIFIED="1577244755078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/caiji$file.coverage" NAME="file Coverage Results" MODIFIED="1574821322752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shell" />
   </component>
   <component name="editorHistoryManager">
@@ -572,15 +543,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pachong/baiducookie.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/dwebsocket/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/dwebsocket/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -652,16 +614,6 @@
           <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="10" />
           <folding>
             <element signature="e#84#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="92" selection-start-line="92" selection-end-line="124" selection-end-column="105" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,13 +753,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/other.py">
+    <entry file="file://$PROJECT_DIR$/../photo/tp/app/middlewarenavbar.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5282">
-          <caret line="294" column="21" selection-end-line="305" />
+        <state>
+          <caret column="93" selection-start-column="93" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/BaiduTransAPI-forPython3.py" />
+    <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/dwebsocket/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caiji/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1843">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
@@ -851,16 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/BaiduTransAPI-forPython3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding>
-            <element signature="e#77#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pachong/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -868,24 +825,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/caiji/settings.py">
+    <entry file="file://$PROJECT_DIR$/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="114">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../photo/tp/app/middlewarenavbar.json">
+    <entry file="file://$PROJECT_DIR$/../photo/tp/app/home/view/menber/file.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="93" selection-start-column="93" selection-end-column="93" />
+        <state relative-caret-position="496">
+          <caret line="525" column="30" lean-forward="true" selection-end-line="532" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/other.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1957">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="61" column="12" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="12" />
+        <state relative-caret-position="456">
+          <caret line="167" column="9" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="9" />
         </state>
       </provider>
     </entry>
