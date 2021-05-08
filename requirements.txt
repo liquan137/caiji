@@ -61,7 +61,7 @@ dwebsocket==0.5.11
 EasyProcess==0.2.7
 entrypoints==0.3
 et-xmlfile==1.0.1
-eventlet==0.25.0
+eventlet==0.31.0
 fake-useragent==0.1.11
 fastcache==1.0.2
 filelock==3.0.10
