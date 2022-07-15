@@ -50,7 +50,7 @@ db==0.1.1
 decorator==4.4.0
 defusedxml==0.5.0
 dicttoxml==1.7.4
-distributed==1.26.0
+distributed==2021.10.0
 Django==2.2.3
 django-cors-headers==3.0.2
 django-ranged-response==0.2.0
