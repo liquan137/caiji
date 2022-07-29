@@ -214,7 +214,7 @@ ruamel-yaml==0.15.46
 scikit-image==0.14.2
 scikit-learn==0.20.3
 scipy==1.2.1
-Scrapy==1.8.0
+Scrapy==2.6.2
 seaborn==0.9.0
 selenium==3.141.0
 Send2Trash==1.5.0
